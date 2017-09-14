@@ -1,18 +1,28 @@
 import { Component } from '@angular/core';
 @Component({
-  selector: 'my-app',
-    template: `
-        
-		<h1> Roman Translator </h1>
-        <input #textbox type="text"  required> 
-        <button (click)="logText(textbox.value)">Convert to Roman</button>
-        
-		<button (click)="textbox.value=''">Clear</button>
-    	<p>Roman Value : {{ textbox.value | creditCardMask | lowercase }}</p>
-       
-        `
+	selector: 'my-app',
+    templateUrl: './app/template.html'
 })
 export class AppComponent implements OnInit  {
+	
+ private selectedLink: string="LowerCase";        
+  
+  setradio(e: string): void   
+  {  
+  
+    this.selectedLink = e;  
+          
+  }  
+  
+    isSelected(name: string): boolean   
+  {  
+  
+        if (!this.selectedLink) { // if no radio button is selected, always return false so every nothing is shown  
+            return false;  
+  }  
+  
+        return (this.selectedLink === name); // if current radio button is selected, return true, else return false  
+    }  
 
  private textValue = "Enter Integer Value";
     private log: string ='';

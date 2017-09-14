@@ -1,0 +1,40 @@
+<div class="container">
+
+
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Roman Translator</div>
+    <div class="panel-body">
+      <h4>Roman Translator</h4>
+	<input #textbox type="text" required>
+	
+	<button (click)="logText(textbox.value)">Convert to Roman</button>
+	<button (click)="textbox.value=''">Clear</button>
+	
+	<div>&nbsp;</div>
+	
+	<div *ngIf="isSelected('LowerCase')">
+		<p>Roman Value : {{ textbox.value | creditCardMask | lowercase }}</p>
+	</div>
+
+	<div *ngIf="isSelected('Uppercase')">
+		<p>Roman Value : {{ textbox.value | creditCardMask | uppercase }}</p>
+	</div>
+
+	<div class="radio">
+		<label> <input type="radio" name="case" value="LowerCase"
+			(click)="setradio('LowerCase')" [checked]='true' ngModel>
+			LowerCase
+		</label>
+	</div>
+	<div class="radio">
+		<label> <input type="radio" name="case" value="Uppercase"
+			(click)="setradio('Uppercase')" ngModel> Uppercase
+		</label>
+	</div>
+    </div>
+  </div>
+</div>
+
+	
+</div>
