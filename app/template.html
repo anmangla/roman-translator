@@ -1,5 +1,3 @@
-<div class="container">
-
 
 <div class="container">
   <div class="panel panel-primary">
@@ -14,11 +12,11 @@
 	<div>&nbsp;</div>
 	
 	<div *ngIf="isSelected('LowerCase')">
-		<p>Roman Value : {{ textbox.value | creditCardMask | lowercase }}</p>
+		<p>Roman Value : {{ textbox.value | romanConverter | lowercase }}</p>
 	</div>
 
 	<div *ngIf="isSelected('Uppercase')">
-		<p>Roman Value : {{ textbox.value | creditCardMask | uppercase }}</p>
+		<p>Roman Value : {{ textbox.value | romanConverter | uppercase }}</p>
 	</div>
 
 	<div class="radio">
@@ -31,10 +29,9 @@
 		<label> <input type="radio" name="case" value="Uppercase"
 			(click)="setradio('Uppercase')" ngModel> Uppercase
 		</label>
-	</div>
+	</div>  
     </div>
   </div>
 </div>
 
 	
-</div>

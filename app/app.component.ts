@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 	selector: 'my-app',
     templateUrl: './app/template.html'
 })
-export class AppComponent implements OnInit  {
+export class AppComponent  {
 	
  private selectedLink: string="LowerCase";        
   
