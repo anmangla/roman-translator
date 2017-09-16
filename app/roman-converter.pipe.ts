@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'romanConverter'
 })
 export class RomanConverterPipe implements PipeTransform {
-  transform(intVal: string): string {
+  transform(intVal: any): string {
   var romanVal = '';
   var intArray = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
   var romanArray = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
@@ -16,6 +16,6 @@ export class RomanConverterPipe implements PipeTransform {
     }
   
   }
-    return romanVal;
+    return romanVal.toString();
 }
 }
