@@ -6,7 +6,7 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading">Roman Translator</div>
 				<div class="panel-body">
-					<h4>Roman Translator</h4>
+					<h5><span style='font-weight: bold; color:blue;'>Enter Numeric Value</span></h5>
 					<input #textbox type="text" class="form-control" name="name"  
 						[(ngModel)]="intVal.val" #name="ngModel" required minlength="1" maxlength="5">
 
@@ -22,13 +22,15 @@
 						<button type="submit" (click)="clearText()">Clear</button>
 					</div>
 
+					<h5><span style='font-weight: bold; color:blue;'>Roman Value Output</span></h5>
+
 					<div *ngIf="isSelected('LowerCase')">
-						<p>Roman Value : {{ textbox.value | romanConverter | lowercase
-							}}</p>
+						<p> {{ textbox.value | romanConverter | lowercase
+							}}</p>	
 					</div>
 
 					<div *ngIf="isSelected('Uppercase')">
-						<p>Roman Value : {{ textbox.value | romanConverter | uppercase
+						<p> {{ textbox.value | romanConverter | uppercase
 							}}</p>
 					</div>
  
